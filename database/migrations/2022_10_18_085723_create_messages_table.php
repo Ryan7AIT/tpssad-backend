@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('valueofa')->nullable();
             $table->integer('valueofb')->nullable();
             $table->string('valueofn')->nullable();
+            $table->string('valueofk')->nullable();
             $table->string('message');
             $table->timestamps();
         });

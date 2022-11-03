@@ -17,4 +17,18 @@ class Message extends Model
     {
         return $this->belongsToMany(User::class, 'messages', 'user_id', 'snedto_user_id');
     }
+
+
+
+    // protected $appends = 'from';
+
+    public function getfromAttribute()
+        {
+
+
+
+
+
+    }
+
 }

@@ -98,6 +98,8 @@ Route::post('/messages', function() {
         'valueofa' => request('valueofa'),
         'valueofb' => request('valueofb'),
         'valueofn' => request('valueofn'),
+        'valueofk' => request('valueofk'),
+
 
 
 
@@ -113,6 +115,8 @@ Route::post('/messages', function() {
 // get all msgs for a given user
 
 Route::get('/messages/{id}', function($id) {
+
+
 
     // $user = User::find($id);
 
@@ -211,6 +215,29 @@ Route::post('newpassword', function() {
     return $user;
 
     return 'DONE';
+});
+
+
+// get the name of a given user
+
+Route::get('/user/{id}', function($id) {
+
+    $user = User::find($id);
+
+    // return User::find(1);
+
+
+    // todo
+
+    // $msgs = Message::where('snedto_user_id', $id);
+
+
+
+    return  response($user,200);
+
+    // return $msgs->get();
+
+
 });
 
 
